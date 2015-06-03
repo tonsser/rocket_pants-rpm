@@ -1,7 +1,5 @@
 require "rocket_pants/rpm/version"
 require "newrelic_rpm"
-require 'new_relic/agent/instrumentation/rails3/action_controller'
-require 'new_relic/agent/instrumentation/rails4/action_controller'
 
 module RocketPants
   module RPM
