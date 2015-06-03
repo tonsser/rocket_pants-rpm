@@ -22,7 +22,6 @@ module RocketPants
       executes do
         class RocketPants::Base
           include NewRelic::Agent::Instrumentation::ControllerInstrumentation
-          include NewRelic::Agent::Instrumentation::Rails3::ActionController
         end
       end
     end
@@ -46,7 +45,6 @@ module RocketPants
         Rails.logger.info "running rpm execute"
         class RocketPants::Base
           include NewRelic::Agent::Instrumentation::ControllerInstrumentation
-          include NewRelic::Agent::Instrumentation::Rails4::ActionController
         end
 
         ActiveSupport::Notifications.subscribe(/^process_action.rocket_pants$/,
